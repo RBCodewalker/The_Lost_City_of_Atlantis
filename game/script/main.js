@@ -3,6 +3,8 @@
 const back2 = new Image();
 back2.src = "./img/background.png";
 
+const wb = new Image();
+wb.src = "./img/wb.png";
 // const back3 = new Image();
 // back3.src = "./img/front.png";
 
@@ -46,7 +48,7 @@ var wave = {
                 this.y += this.s_mod * temp;
             }
         }else{ // going down
-            this.y += 0.1 * this.s_mod * temp;
+            this.y += 0.2 * this.s_mod * temp;
         }
         count++;
         if(count == 30){
@@ -60,7 +62,7 @@ var wave = {
 };
 var wave2 = {
     x:-500,
-    y:50,
+    y:20,
     h:400,
     w:250,
     s_mod:2,
@@ -68,10 +70,10 @@ var wave2 = {
         this.x += 2 * this.s_mod;
         if(temp == 1){
             if(this.y <= 350){
-                this.y += this.s_mod * temp * -1;
+                this.y += this.s_mod * temp;
             }
         }else{ // going down
-            this.y += 0.1 * this.s_mod * temp * -1;
+            this.y += 0.1 * this.s_mod * temp;
         }
         count++;
         if(count == 30){
@@ -109,7 +111,9 @@ var collectables = [{
     w:100
 }];
 var final = document.getElementById("final");
+var val_y = 0;
 function update(){// update loop runs 30 times a sec
+    val_y += 20;
     if(play){
         if(collision(player,wave)){
             player_img.src = "./img/player_sad_l.png";
@@ -129,7 +133,7 @@ function update(){// update loop runs 30 times a sec
         //SOMEHOW WORKS PLZ DONT TOUCH
         
         ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height); //clears canvas
-
+        ctx.drawImage(wb, 0, val_y, 9000, 200);
         for(layer of layers_arr){//draws background
             layer.draw();
         }
