@@ -13,7 +13,8 @@
 <canvas id = "screen"></canvas>
 <div style="height: 100vh;width: 100vw;display: flex;justify-content: center;align-items: center;z-index: 2;"><p id = "final"style="font-size:10em; color:white"></p></div>
 
-<script>
+<span id = "time"> Remaining </span>
+    <script>
 var canvas = document.getElementById('screen');
 var ctx = canvas.getContext('2d');
 var hori_speed = 8; //default speed for any horizontal movement
@@ -106,5 +107,6 @@ document.addEventListener('keydown', foo);
 document.addEventListener('keyup', boo);
 </script>
 <script src="script/main.js"></script>
+    <script src="script/timer.js"></script>
 </body>
 </html>
