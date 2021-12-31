@@ -76,7 +76,8 @@ var wave2 = {
             this.y += 0.1 * this.s_mod * temp;
         }
         count++;
-        if(count == 30){
+        if(count == 30)
+        {
             temp *= -1;
             count = 0;
         }
