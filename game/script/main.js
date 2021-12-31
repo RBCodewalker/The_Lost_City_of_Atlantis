@@ -41,7 +41,8 @@ var wave = {
     h:500,
     w:300,
     s_mod:2,
-    draw:function(){
+    draw:function()
+    {
         this.x += 2 * this.s_mod;
         if(temp == 1){
             if(this.y <= 350){
