@@ -7,5 +7,5 @@ ctx2.canvas.width = window.innerWidth;
 const back1 = new Image();
 back1.src = "./img/front.png";
 
-ctx2.fillStyle = 'green'; 
+ctx2.fillStyle = 'green';
 ctx2.fillRect(0,0,100,100);
