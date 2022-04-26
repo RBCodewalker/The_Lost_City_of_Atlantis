@@ -27,7 +27,7 @@ var player = {
     x:400,
     y:250,
     h:100,
-    w:100, 
+    w:100,
     vy:-5,
     draw:function(){
         ctx.drawImage(player_img, player.x, ctx.canvas.height - player.y, player.h, player.w);
